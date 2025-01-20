@@ -1,0 +1,54 @@
+
+
+1. **Importing Modules**:
+   - The code imports the `numpy` library as `np`. This library is used for numerical operations, particularly on arrays.
+   - It also imports everything from `numpy` using `from numpy import *`. This is redundant because `numpy` was already imported as `np`.
+
+2. **Defining Arrays**:
+   - Two arrays `arr1` and `arr2` are defined:
+     ```python
+     arr1 = np.array([1, 2], int)
+     arr2 = np.array([3, 4], int)
+     ```
+     These are NumPy arrays that store integer values `[1, 2]` and `[3, 4]` respectively.
+
+3. **Adding Arrays**:
+   - The arrays `arr1` and `arr2` are added element-wise using the `+` operator:
+     ```python
+     merged_arr = arr1 + arr2
+     ```
+     The result, `merged_arr`, is `[4, 6]` because:
+       - `1 + 3 = 4`
+       - `2 + 4 = 6`
+
+4. **Calculating the Median**:
+   - The median of `merged_arr` is calculated using the `median()` function:
+     ```python
+     median(merged_arr)
+     ```
+     The median of `[4, 6]` is `5` because it’s the middle value when the numbers are sorted.
+
+   - This median is then divided by `2`:
+     ```python
+     merged_arr1 = median(merged_arr) / 2
+     ```
+     So, `merged_arr1 = 5 / 2 = 2.5`.
+
+5. **Printing the Result**:
+   - The code prints the result in a formatted string:
+     ```python
+     print('The Median of array {} and array2 {} is = {}'.format(arr1, arr2, merged_arr1))
+     ```
+     It replaces `{}` with the values of `arr1`, `arr2`, and `merged_arr1`, displaying:
+     ```
+     The Median of array [1 2] and array2 [3 4] is = 2.5
+     ```
+
+### Summary
+This code:
+1. Creates two arrays.
+2. Adds them element-wise to form a new array.
+3. Calculates the median of the resulting array.
+4. Divides the median by 2 and prints the result.
+
+You can use this explanation on GitHub to clarify the purpose and functionality of your code.
